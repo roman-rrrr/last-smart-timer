@@ -6,6 +6,7 @@ from time import localtime
 stop_flag = False
 now = [None, 0, 0]
 
+
 def format_time(seconds):
     seconds = int(seconds)
     minutes = seconds // 60
@@ -30,7 +31,7 @@ def send_status():
                 "2" : ["До работы осталось: ", format_time(now[2])],
                 "3" : "тут будет полезная ссылка"
             }
-        
+
 
 def run_timer(_1, _2, _3, _4):
     global stop_flag, now
@@ -136,5 +137,3 @@ def run_timer(_1, _2, _3, _4):
             accounting += "b"
             print("Пора возвращаться к работе((")
             os.system("afplay Пора_возвращаться_к_работе.mp3")
-
-
